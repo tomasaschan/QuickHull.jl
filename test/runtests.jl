@@ -35,4 +35,10 @@ setequals(A, B) = length(setdiff(union(A,B), intersect(A,B))) == 0
 actual = qhull(points)
 @test setequals(actual, expected)
 
+# test convenience wrapper
+coords(ps) = map(p->p[1], ps), map(p->p[2], ps)
+xs_actual, ys_actual = qhull(coords(points)...)
+actual2 = map(Vec, xs_actual, ys_actual)
+@test setequals(actual2, expected)
+
 end

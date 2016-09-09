@@ -7,7 +7,7 @@ export qhull
 function qhull(xs, ys)
     points = map(Vec, xs, ys)
     hull = qhull(points)
-    x, y = zip(map(p -> (p...), hull))
+    x, y = collect(zip(map(p -> (p...), hull)...))
     collect(x), collect(y)
 end
 
