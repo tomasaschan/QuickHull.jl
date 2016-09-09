@@ -1,6 +1,6 @@
-module QHullTests
+module QuickHullTests
 
-using QHull
+using QuickHull
 using Base.Test
 using FixedSizeArrays
 

@@ -1,4 +1,4 @@
-module QHull
+module QuickHull
 
 using FixedSizeArrays
 

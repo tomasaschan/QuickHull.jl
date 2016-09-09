@@ -1,4 +1,4 @@
-The QHull.jl package is licensed under the MIT "Expat" License:
+The QuickHull.jl package is licensed under the MIT "Expat" License:
 
 > Copyright (c) 2016: Tomas Lycken.
 > 
