@@ -28,8 +28,11 @@ expected = [
  Vec(0.146051, 0.549534)
 ]
 
-actual = qhull(expected)
+# helper methods
+setequals(A, B) = length(setdiff(union(A,B), intersect(A,B))) == 0
 
-@test length(setdiff(actual ∪ expected, actual ∩ expected)) == 0
+# test implementation
+actual = qhull(points)
+@test setequals(actual, expected)
 
 end
