@@ -1,14 +1,16 @@
 # The QuickHull package
 
-QuickHull is a naïve implementation of the [QuickHull][wiki] algorithm for
-calculating the convex hull of a set of points in 2D.
+QuickHull is a naïve implementation of the
+[QuickHull](https://en.wikipedia.org/wiki/Quickhull) algorithm for calculating
+the convex hull of a set of points in 2D.
 
 ![foo](figures/sample-25.png)
 
 ## Usage
 
-The algorithm works with `Vec{2}`s from [FixedSizeArrays][fsa], so you can pass
-a vector of such points directly to the algorithm:
+The algorithm works with `Vec{2}`s from
+[FixedSizeArrays](https://github.com/SimonDanisch/FixedSizeArrays.jl), so you
+can pass a vector of such points directly to the algorithm:
 
 ```@example
 using FixedSizeArrays
@@ -32,6 +34,3 @@ xhull, yhull = qhull(xs, ys)
 ```
 
 As you notice, the format of the return values matches that of the input.
-
-[wiki]: https://en.wikipedia.org/wiki/Quickhull
-[fsa]: https://github.com/SimonDanisch/FixedSizeArrays.jl
