@@ -1,9 +1,33 @@
+"""
+Find the convex hull of a set of points in 2D.
+
+Usage:
+
+```
+using QuickHull, FixedSizeArrays
+points = map(Vec, rand(10), rand(10))
+hull = qhull(points)
+```
+
+or
+
+```
+using QuickHull
+xs, ys = rand(10), rand(10)
+hullx, hully = qhull(xs, ys)
+```
+
+Documentation is available at https://tlycken.github.io/QuickHull.jl/latest
+"""
 module QuickHull
 
 using FixedSizeArrays
 
 export qhull
 
+"""
+`hullx, hully = qhull(xs, ys)`
+"""
 function qhull(xs, ys)
     points = map(Vec, xs, ys)
     hull = qhull(points)
@@ -11,6 +35,9 @@ function qhull(xs, ys)
     collect(x), collect(y)
 end
 
+"""
+`hull = qhull(points::Vector{Vec{2,T}})`
+"""
 function qhull{T<:Vec{2}}(points::Vector{T})
     hull = Vector{T}(0)
 
@@ -29,6 +56,11 @@ function qhull{T<:Vec{2}}(points::Vector{T})
 
     hull
 end
+
+"""
+Find the convex hull of a set of points in 2D.
+"""
+qhull
 
 function qhull!(hull, P, Q, points)
     length(points) == 0 && return
