@@ -142,14 +142,16 @@ using QuickHull
 hull = qhull(points)
 </code></pre>
 
-<pre><code>7-element Array{FixedSizeArrays.Vec{2,Float64},1}:
- Vec(0.0726327,0.622562)
- Vec(0.265702,0.114907)
- Vec(0.492244,0.0511085)
- Vec(0.68898,0.0249308)
- Vec(0.78221,0.0454467)
- Vec(0.923403,0.990991)
- Vec(0.11396,0.896138)
+<pre><code>9-element Array{FixedSizeArrays.Vec{2,Float64},1}:
+ Vec(0.0445592,0.422049)
+ Vec(0.0737183,0.200821)
+ Vec(0.94896,0.0126141)
+ Vec(0.940277,0.447764)
+ Vec(0.896801,0.651625)
+ Vec(0.740087,0.790612)
+ Vec(0.578067,0.911319)
+ Vec(0.202189,0.883451)
+ Vec(0.0822194,0.709138)
 </code></pre>
 
 <p>The points are returned in order, starting with the leftmost point and moving counter-clockwise around convex hull.</p>
@@ -160,7 +162,7 @@ using QuickHull
 xhull, yhull = qhull(xs, ys)
 </code></pre>
 
-<pre><code>([0.0529453,0.0834245,0.658618,0.874962,0.91916,0.107925,0.0747459],[0.335711,0.0240637,0.00842296,0.267631,0.883911,0.967244,0.965119])
+<pre><code>([0.0925269,0.194925,0.951341,0.983595,0.996197,0.991522,0.985222,0.318462,0.169771],[0.480565,0.130644,0.0981057,0.145279,0.600154,0.857333,0.978437,0.83802,0.672231])
 </code></pre>
 
 <p>As you notice, the format of the return values matches that of the input.</p>
@@ -211,5 +213,5 @@ xhull, yhull = qhull(xs, ys)
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-09-12 15:50:49.103929
+Build Date UTC : 2016-09-12 16:08:18.194320
 -->
