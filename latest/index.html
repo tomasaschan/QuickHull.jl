@@ -130,11 +130,11 @@
               
                 <p><a id='The-QuickHull-package-1'></a></p>
 <h1 id="the-quickhull-package">The QuickHull package</h1>
-<p>QuickHull is a naïve implementation of the [QuickHull][wiki] algorithm for calculating the convex hull of a set of points in 2D.</p>
+<p>QuickHull is a naïve implementation of the <a href="https://en.wikipedia.org/wiki/Quickhull">QuickHull</a> algorithm for calculating the convex hull of a set of points in 2D.</p>
 <p><img alt="foo" src="./figures/sample-25.png" /></p>
 <p><a id='Usage-1'></a></p>
 <h2 id="usage">Usage</h2>
-<p>The algorithm works with <code>Vec{2}</code>s from [FixedSizeArrays][fsa], so you can pass a vector of such points directly to the algorithm:</p>
+<p>The algorithm works with <code>Vec{2}</code>s from <a href="https://github.com/SimonDanisch/FixedSizeArrays.jl">FixedSizeArrays</a>, so you can pass a vector of such points directly to the algorithm:</p>
 <pre><code class="julia">using FixedSizeArrays
 points = map(Vec, rand(25), rand(25))
 
@@ -142,16 +142,14 @@ using QuickHull
 hull = qhull(points)
 </code></pre>
 
-<pre><code>9-element Array{FixedSizeArrays.Vec{2,Float64},1}:
- Vec(0.00840213,0.542623)
- Vec(0.0568254,0.0618145)
- Vec(0.0863335,0.0245823)
- Vec(0.20164,0.0309435)
- Vec(0.509721,0.0481386)
- Vec(0.866601,0.186967)
- Vec(0.961207,0.264894)
- Vec(0.998963,0.548959)
- Vec(0.989862,0.914051)
+<pre><code>7-element Array{FixedSizeArrays.Vec{2,Float64},1}:
+ Vec(0.0120963,0.416525)
+ Vec(0.469978,0.0208916)
+ Vec(0.877494,0.0586725)
+ Vec(0.878407,0.621689)
+ Vec(0.50553,0.986818)
+ Vec(0.0740856,0.985201)
+ Vec(0.0329496,0.946851)
 </code></pre>
 
 <p>The points are returned in order, starting with the leftmost point and moving counter-clockwise around convex hull.</p>
@@ -162,11 +160,10 @@ using QuickHull
 xhull, yhull = qhull(xs, ys)
 </code></pre>
 
-<pre><code>([0.0335323,0.220475,0.633909,0.697079,0.968929,0.978517,0.707973,0.193413,0.113422,0.0515524],[0.649627,0.206915,0.175202,0.214664,0.674218,0.771082,0.868207,0.963712,0.935231,0.874709])
+<pre><code>([0.00756321,0.0501933,0.276757,0.617945,0.855674,0.852089,0.762958,0.676873,0.0308398],[0.527629,0.456471,0.237851,0.0849572,0.0967448,0.221637,0.91809,0.966969,0.942915])
 </code></pre>
 
 <p>As you notice, the format of the return values matches that of the input.</p>
-<p>[wiki]: https://en.wikipedia.org/wiki/Quickhull [fsa]: https://github.com/SimonDanisch/FixedSizeArrays.jl</p>
               
             </div>
           </div>
@@ -214,5 +211,5 @@ xhull, yhull = qhull(xs, ys)
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-09-12 14:41:12.442458
+Build Date UTC : 2016-09-12 14:47:15.972797
 -->
